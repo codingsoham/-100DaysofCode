@@ -114,13 +114,44 @@ void test4(){
     l1.erase(it);
     display(l1);
 
+}
+void test5(){
+    cout<<"\nTest5============================================================================="<<endl;
+    
+    list<Person> stooges{
+        {"Larry",18},
+        {"Moe",25},
+        {"Curly",17}
+    };
 
+    display(stooges);
+    string name;
+    int age;
+    cout<<"Entert the name of the next stooge: ";
+    getline(cin,name);
 
+    cout<<"Enter their age: ";
+    cin>>age;
+
+    stooges.emplace_back(name,age);
+    display(stooges);
+
+    auto it=find(stooges.begin(),stooges.end(),Person{"Moe",25});
+    stooges.emplace(it,"Frank",18);
+    display(stooges);
+
+    stooges.sort();
+    display(stooges);
+    
+    
+    
+    
 }
 int main() {
     test1();
     test2();
     test3();
     test4();
+    test5();
     return 0;
 }
