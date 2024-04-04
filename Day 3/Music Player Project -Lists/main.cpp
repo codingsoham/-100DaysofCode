@@ -179,7 +179,7 @@ int main() {
             cond=false;
         break;
         default:
-            cout<<"Invalid Input. Try Again!!";
+            cout<<"Invalid Input. Try Again!";
 
     }
     }while(cond);
