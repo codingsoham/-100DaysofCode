@@ -84,9 +84,6 @@ void test2() {
     display(grades);
 }
 
-
-
-
 int main() {
     test1();
     test2();
